@@ -1,29 +1,26 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-import macOs from "../../Assets/TechIcons/Apple MacOSX.svg";
-import chrome from "../../Assets/TechIcons/Google Chrome.svg";
-import vsCode from "../../Assets/TechIcons/vscode.svg";
-import intelliJ from "../../Assets/TechIcons/intellij-idea.svg";
+import { SiVisualstudiocode, SiGooglechrome, SiGithub } from "react-icons/si";
+import { FaMobileAlt } from "react-icons/fa";
 
 function Toolstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       <Col xs={4} md={2} className="tech-icons">
-        <img src={macOs} alt="macOs" className="tech-icon-images" />
-        <div className="tech-icons-text">Mac Os</div>
+        <SiVisualstudiocode fontSize={"24px"} />
+        <div className="tech-icons-text">VS Code</div>
       </Col>
-      <Col xs={4} md={2} className="tech-icons ">
-        <img src={chrome} alt="Chrome" className="tech-icon-images" />
-        <div className="tech-icons-text">Google Chrome</div>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiGooglechrome fontSize={"24px"} />
+        <div className="tech-icons-text">Chrome</div>
       </Col>
-      <Col xs={4} md={2} className="tech-icons ">
-        <img src={vsCode} alt="vsCode" className="tech-icon-images" />
-        <div className="tech-icons-text">Vs Code</div>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiGithub fontSize={"24px"} />
+        <div className="tech-icons-text">GitHub</div>
       </Col>
-
-      <Col xs={4} md={2} className="tech-icons ">
-        <img src={intelliJ} alt="go" className="tech-icon-images" />
-        <div className="tech-icons-text">IntelliJ</div>
+      <Col xs={4} md={2} className="tech-icons">
+        <FaMobileAlt fontSize={"24px"} />
+        <div className="tech-icons-text">Mobile Dev</div>
       </Col>
     </Row>
   );

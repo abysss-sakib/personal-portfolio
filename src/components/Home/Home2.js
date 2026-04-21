@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import myImg from "../../Assets/avatar.svg";
 import Tilt from "react-parallax-tilt";
-import { AiFillInstagram } from "react-icons/ai";
+import { AiFillInstagram, AiFillGithub } from "react-icons/ai";
 import { FaFacebookF } from "react-icons/fa";
 
 function Home2() {
@@ -15,9 +15,9 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              Hi, I’m <span className="purple">Sa Kib</span>.
+              Hi, I'm <span className="purple">Sa Kib</span>.
               <br />
-              I’m a student who enjoys exploring coding in a simple way. I use{" "}
+              I'm a student who enjoys exploring coding in a simple way. I use{" "}
               <i>
                 <b className="purple">AI tools</b>
               </i>{" "}
@@ -28,7 +28,7 @@ function Home2() {
               .
               <br />
               <br />
-              I’ve also worked on{" "}
+              I've also worked on{" "}
               <i>
                 <b className="purple">Messenger bots</b>
               </i>{" "}
@@ -80,6 +80,17 @@ function Home2() {
                   aria-label="Instagram"
                 >
                   <AiFillInstagram />
+                </a>
+              </li>
+              <li className="social-icons">
+                <a
+                  href="https://github.com/noturtypesakib"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="icon-colour home-social-icons"
+                  aria-label="GitHub"
+                >
+                  <AiFillGithub />
                 </a>
               </li>
             </ul>

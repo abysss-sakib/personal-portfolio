@@ -1,198 +1,134 @@
-# Sa Kib — Portfolio
+# Sa Kib — Personal Portfolio Website
 
-A simple personal portfolio website built with React. This guide explains every
-file in the project and how to make common changes without touching anything
-you don't need to.
+## 1. Project Overview
 
----
-
-## 1. Project structure
-
-```
-Portfolio-master/
-├── package.json          # Lists the libraries the project uses
-├── package-lock.json     # Locked versions (don't edit by hand)
-├── README.md             # This file
-├── public/
-│   ├── index.html        # Main HTML page that loads the React app
-│   ├── favicon.png       # Browser tab icon
-│   ├── manifest.json     # Web-app metadata
-│   └── robots.txt        # Search-engine instructions
-└── src/
-    ├── index.js          # Starts the React app
-    ├── App.js            # Sets up the page routes (Home / About / Projects / Resume)
-    ├── App.css           # Small global styles for App
-    ├── style.css         # Main stylesheet (colors, layout, animations)
-    ├── data/
-    │   └── projects.js   # ⭐ Your projects list (edit this to add projects)
-    ├── Assets/           # Images, icons and the resume PDF
-    │   ├── about.png
-    │   ├── avatar.svg
-    │   ├── home-main.svg
-    │   ├── pre.svg
-    │   ├── Soumyajit_Behera.pdf  (resume PDF used by the Resume page)
-    │   └── TechIcons/    (logos shown on the About page)
-    └── components/
-        ├── Navbar.js     # Top navigation bar (the "Sa Kib" logo + Home / About / Projects)
-        ├── Footer.js     # Bottom footer (copyright + social links)
-        ├── Particle.js   # Background particle animation
-        ├── Pre.js        # Page-loading bar
-        ├── ScrollToTop.js# "Scroll to top" button
-        ├── Home/
-        │   ├── Home.js   # Hero section ("Hi There! I'M SA KIB")
-        │   ├── Home2.js  # "Let me introduce myself" + Find Me On
-        │   └── Type.js   # The animated typing text under the hero
-        ├── About/
-        │   ├── About.js  # About page wrapper
-        │   ├── AboutCard.js  # ⭐ The "About Me" text
-        │   ├── Techstack.js  # Tech logos grid
-        │   ├── Toolstack.js  # Tools logos grid
-        │   └── Github.js     # GitHub activity calendar
-        ├── Projects/
-        │   ├── Projects.js   # Renders the projects from data/projects.js
-        │   └── ProjectCards.js  (legacy card component, no longer used)
-        └── Resume/
-            └── ResumeNew.js  # Resume page (shows the PDF)
-```
-
-### Which file controls which part of the website
-
-| Part of the site            | File to edit                           |
-|----------------------------|----------------------------------------|
-| Top-left logo / brand text | `src/components/Navbar.js`             |
-| Top navigation links       | `src/components/Navbar.js`             |
-| Hero ("Hi There! I'M SA KIB") | `src/components/Home/Home.js`       |
-| Animated typing text       | `src/components/Home/Type.js`          |
-| "Let me introduce myself"  | `src/components/Home/Home2.js`         |
-| About Me text              | `src/components/About/AboutCard.js`    |
-| Projects list              | `src/data/projects.js`  ⭐             |
-| Footer                     | `src/components/Footer.js`             |
-| Colors, fonts, layout      | `src/style.css`                        |
+This is a **fully customizable personal portfolio website** built with React.js.  
+It showcases your name, introduction, about section, projects, and resume — and every single piece of content is yours to change at any time.  
+Nothing in this project is locked, hardcoded, or permanent. You have full control over the entire website.
 
 ---
 
-## 2. How to add or remove projects (super easy)
+## 2. Full Editable System
 
-You never need to edit any HTML or JSX. Just open one file:
+- **Every file in this project is fully editable** — nothing is hidden or protected.
+- Nothing is locked or fixed permanently.
+- You can modify any text, image, color, layout, link, or data as needed.
+- No advanced technical experience is required for basic content changes (name, projects, social links, about text).
 
-**`src/data/projects.js`**
+---
 
-Add a new object to the `projects` array. Each project has 3 fields
-(the `link` is optional):
+## 3. File-by-File Explanation
+
+| File / Folder | What It Does |
+|---|---|
+| `public/index.html` | Page title and meta tags shown in browser tabs and search engines |
+| `src/components/Home/Home.js` | Hero section — your name displayed prominently on the homepage |
+| `src/components/Home/Home2.js` | Introduction section — your "About Me" paragraph and social media links |
+| `src/components/Home/Type.js` | The animated typing text under your name on the homepage |
+| `src/components/Navbar.js` | Navigation bar — your brand name and all menu links |
+| `src/components/Footer.js` | Footer — copyright line and social media links |
+| `src/components/About/AboutCard.js` | The About page text card — your full about description |
+| `src/components/About/Techstack.js` | Technology icons shown on the About page |
+| `src/components/About/Toolstack.js` | Tools icons shown on the About page |
+| `src/components/Projects/Projects.js` | Projects page — reads project data automatically, no changes needed here |
+| `src/data/projects.js` | **All projects data lives here** — add, edit, or remove projects easily |
+| `src/Assets/Sa_Kib_CV.pdf` | Your resume/CV file — replace this with your own PDF |
+| `src/Assets/` | All images and icons — can be replaced or removed |
+| `src/style.css` | Full design, layout, colors, spacing — all fully editable |
+| `src/App.css` | Additional component-level styles |
+| `src/index.css` | Global base styles for the whole site |
+
+---
+
+## 4. What Can Be Modified Easily
+
+### Name
+- `src/components/Home/Home.js` — change `Sa Kib` in the hero heading
+- `src/components/Navbar.js` — change `Sa Kib` in the top-left brand area
+- `src/components/Footer.js` — update the copyright name at the bottom
+- `src/components/Home/Home2.js` — update the name in the introduction paragraph
+
+### About Me Text
+- Open `src/components/Home/Home2.js`
+- Edit the paragraph inside `<p className="home-about-body">` with your own words
+- Also open `src/components/About/AboutCard.js` for the full About page text
+
+### Projects (Add / Remove Anytime)
+- Open `src/data/projects.js`
+- Add or remove project objects from the array — the website updates automatically
+- Each project only needs 3 simple fields: `title`, `description`, and `link` (optional)
+
+### Social Links (Facebook, Instagram, GitHub)
+- Open `src/components/Home/Home2.js` — update the `href` values in the social icons section
+- Open `src/components/Footer.js` — update the matching links in the footer
+
+### UI Styling (Colors, Fonts, Spacing)
+- Open `src/style.css` — every visual property is editable here
+- Change colors, font sizes, padding, margins — all in one place
+
+### Resume / CV File
+- Replace `src/Assets/Sa_Kib_CV.pdf` with your own PDF — keep the same filename
+- Or update the import line inside `src/components/Resume/ResumeNew.js` to match your new filename
+
+---
+
+## 5. Projects System
+
+Projects are **not hardcoded inside any HTML file**. They are fully dynamic:
+
+- All project data is stored in `src/data/projects.js`
+- The website reads this file automatically and renders every project on the Projects page
+- To **add** a project, open `src/data/projects.js` and add a new object to the array:
 
 ```js
-const projects = [
-  {
-    title: "My First Website",
-    description: "A small responsive site I built to learn React.",
-    link: "https://example.com",   // optional — leave empty "" for no link
-  },
-  {
-    title: "Telegram Reminder Bot",
-    description: "A bot that sends me daily reminders.",
-    link: "",
-  },
-];
-
-export default projects;
+{
+  title: "My New Project",
+  description: "A short description of what this project does.",
+  link: "https://github.com/yourusername/project",  // optional — remove if not needed
+}
 ```
 
-Save the file. The Projects section will update automatically the next time
-the website loads. To remove a project, just delete its block.
-
-If the array is empty (`const projects = [];`), the Projects section shows
-a friendly "No projects yet" message instead of being broken.
+- To **remove** a project, delete its object from the array
+- No changes are needed in any HTML, layout, or component file — it all updates automatically
+- If the array is empty, the page shows a friendly message instead of breaking
 
 ---
 
-## 3. How to change other text
+## 6. Important Note
 
-### Change the top-left brand name
-Open `src/components/Navbar.js` and change the text inside the
-`<Navbar.Brand>` tag (currently `Sa Kib`).
-
-### Change the About Me text
-Open `src/components/About/AboutCard.js` and edit the text inside the
-`<p>` tags.
-
-### Change the hero name ("I'M SA KIB")
-Open `src/components/Home/Home.js` and edit the `<strong className="main-name">`
-text.
-
-### Change the animated typing words
-Open `src/components/Home/Type.js` and edit the `strings` array.
-
-### Change footer text or social links
-Open `src/components/Footer.js`.
+- This entire project is **fully customizable** — there is no hardcoded or locked content
+- Every file is safe to open and modify
+- Content-only changes (text, links, project data) will never break the design or layout
+- If you change something and want to revert, simply restore the original text
 
 ---
 
-## 4. Run the project locally
+## 7. Goal
+
+This README is written to be **beginner-friendly**.  
+Anyone — even without coding experience — can open any file listed above, make their changes, save the file, and the website will reflect the update immediately.  
+No special tools, no complex setup, and no advanced knowledge required for everyday customization.
+
+---
+
+## 8. Run the Project Locally
 
 You need [Node.js](https://nodejs.org/) installed (version 16 or newer).
 
 ```bash
-# 1. Install dependencies (only the first time)
+# Install dependencies (only needed once)
 npm install
 
-# 2. Start the development server
+# Start the development server
 npm start
 ```
 
-This opens the site at **http://localhost:3000** and reloads automatically
-whenever you save a file.
+The site opens at **http://localhost:3000** and reloads automatically when you save any file.
 
-To stop the server, press `Ctrl + C` in the terminal.
-
----
-
-## 5. Build for production
+## 9. Build for Production
 
 ```bash
 npm run build
 ```
 
-This creates an optimized `build/` folder you can upload to any static host
-(Netlify, Vercel, GitHub Pages, Cloudflare Pages, your own server, etc.).
-
-### Quick deploy options
-
-#### Deploy on Vercel (recommended — easiest)
-
-This project already includes a `vercel.json` file, so deployment is one-click.
-
-**Option A — From the Vercel website (no command line):**
-1. Push this folder to a GitHub / GitLab / Bitbucket repository.
-2. Go to https://vercel.com/new and import the repository.
-3. Vercel auto-detects Create React App. Just click **Deploy**.
-4. Done — you'll get a free `your-project.vercel.app` URL.
-
-**Option B — From your terminal:**
-```bash
-npm install -g vercel
-vercel        # first time: follow the prompts
-vercel --prod # deploy to production
-```
-
-The included `vercel.json` does two things:
-- Tells Vercel to build with `npm run build` and serve the `build/` folder.
-- Adds an SPA rewrite so deep links like `/about` and `/project` work after
-  refresh (instead of returning 404).
-
-#### Other hosts
-
-- **Netlify:** drag and drop the `build/` folder onto https://app.netlify.com/drop,
-  or connect the repo (build command `npm run build`, publish directory `build`).
-- **GitHub Pages:** install `gh-pages` and run `npm run deploy` (you may need
-  to add a `homepage` field in `package.json` and a `deploy` script).
-
----
-
-## 6. Tips
-
-- **Don't break the design** — only change text and the projects file unless
-  you know CSS.
-- **Keep file names the same** — components import each other by name.
-- **After editing, refresh the browser** — `npm start` usually does it for you.
-
-That's it! Happy editing.
+This creates an optimized `build/` folder you can upload to any static host such as Vercel, Netlify, or GitHub Pages. The included `vercel.json` file makes one-click Vercel deployment work out of the box.
