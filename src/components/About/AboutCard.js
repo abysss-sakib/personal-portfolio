@@ -1,30 +1,42 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
+import { ImPointRight } from "react-icons/im";
 
 function AboutCard() {
   return (
     <Card className="quote-card-view">
       <Card.Body>
         <blockquote className="blockquote mb-0">
-
           <p style={{ textAlign: "justify" }}>
-            Hi, I'm <span className="purple">Sa Kib</span>.
-            <br /><br />
-
-            I enjoy exploring coding and technology in a simple and practical way, focusing on building clean and user-friendly web projects.
-            <br /><br />
-
-            I'm a student with a strong interest in web development, and I use AI tools to help me create websites and improve my workflow. Most of my work is done from my mobile device, which helps me stay flexible and consistent in learning.
-            <br /><br />
-
-            I have also worked on projects like Messenger bots and small game-related ideas, which helped me understand problem-solving and development basics.
-            <br /><br />
-
-            I am always eager to learn, improve step by step, and build simple yet useful projects over time.
+            Hi, I’m <span className="purple">Sa Kib</span>.
+            <br />
+            I’m a student who enjoys exploring coding in a simple way. I use{" "}
+            <span className="purple">AI tools</span> to build websites, and I
+            usually do my work from my <span className="purple">mobile</span>.
+            I’ve also worked on{" "}
+            <span className="purple">Messenger bots</span> and{" "}
+            <span className="purple">game-related projects</span>.
+            <br />
+            <br />
+            In my free time, I enjoy:
           </p>
 
-          <footer className="blockquote-footer">Sa Kib</footer>
+          <ul>
+            <li className="about-activity">
+              <ImPointRight /> Gaming
+            </li>
+            <li className="about-activity">
+              <ImPointRight /> Watching Anime
+            </li>
+            <li className="about-activity">
+              <ImPointRight /> A bit of Editing
+            </li>
+          </ul>
 
+          <p style={{ color: "rgb(155 126 172)" }}>
+            "I enjoy building simple things and improving step by step."
+          </p>
+          <footer className="blockquote-footer">Sa Kib</footer>
         </blockquote>
       </Card.Body>
     </Card>
